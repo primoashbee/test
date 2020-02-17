@@ -1,9 +1,13 @@
 <?php
 
+use Dotenv\Dotenv;
+
 require "vendor/autoload.php";
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+// if (file_exists(__DIR__ . '/.env')) {
+//     $dotenv = Dotenv::create(__DIR__);
+//     $dotenv->load();
+// }
 
 $ip = isset($_SERVER['HvendorTTP_CLIENT_IP']) ? $_SERVER['HTTP_CLIENT_IP'] : isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
 $email = new \SendGrid\Mail\Mail(); 
