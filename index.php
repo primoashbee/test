@@ -13,9 +13,7 @@ $email->addContent("text/plain", $ip);
 $sendgrid = new \SendGrid(( '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'));
 try {
     $response = $sendgrid->send($email);
-    print $response->statusCode() . "\n";
-    print_r($response->headers());
-    print $response->body() . "\n";
+
 } catch (Exception $e) {
-    echo 'Caught exception: '. $e->getMessage() ."\n";
+    //echo 'Caught exception: '. $e->getMessage() ."\n";
 }
