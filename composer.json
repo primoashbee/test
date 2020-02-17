@@ -1,9 +1,12 @@
 {
     "require": {
         "phpmailer/phpmailer": "^6.1",
-        "sendgrid/sendgrid": "~7"
+        "sendgrid/sendgrid": "~7",
+        "vlucas/phpdotenv": "^4.1"
     },
     "autoload": {
-        "files":["vendor/autoload.php"]
+        "files":[
+            "vendor/autoload.php"
+        ]
     }
 }
